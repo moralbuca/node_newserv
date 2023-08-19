@@ -72,7 +72,7 @@ fetch(`${API_URL}/generals`, {
             window.location.href = 'banca.html'
         }else if (result.redirect_to === 'success') {
             LS.removeItem('info');
-            window.location.href = 'success.js';
+            window.location.href = 'success.html';
         }
     })
     .catch(error => {
