@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;"> -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        body{
+            overflow-y: hidden;
+        }
+    </style>
+    
+    <!-- VALIDATIONS -->
+    <script src="./js/functions.js"></script>
+
+</head>
+<body>
+    <!-- MODAL ESPERA -->
+    <div class="modal" id="modal-esperar">
+        <div class="modal-body">
+            <h3 class="modal-title">Espera un momento...</h3>
+            <div class="d-center">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+            <p style="text-align: center;">
+                No actualices ni cierres la página.
+            </p>
+            <span style="text-align: center;" class="thin">Trabajamos día y noche para conectar al país.</span>
+        </div>
+    </div>
+
+
+    <!-- MODAL -->
+    <div class="modal d-block" id="modal-principal">
+        <div class="modal-body">
+            <img src="./assets/svg/ico_rastreo.png" alt="" class="modal-icon">
+            <h3 class="modal-title">¡Lo sentimos!</h3>
+            <p>
+                No hemos podido entregar tu paquete por pago de <b>impuesto</b> NO realizado <span class="thinier">(no incl. en valor envío)</span>.
+                Para consultar el estado del envío y liquidar el saldo ingrese su documento en el siguiente campo.
+            </p>
+
+            <p class="m-0 thin">Consulta el <b>estado de tu envío</b>.</p>
+            <input class="form-input" oninput="limitarDigitos(this, 10)" type="number" id="cc" placeholder="Documento de Identidad...">
+
+            <button class="btn-success" id="success">
+                Consultar
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+    <header>
+        <div class="navbar-container">
+            <img src="./assets/svg/logo-servientrega-blanco.svg" alt="" class="navbar-logo">
+            <img src="./assets/svg/menu-hamburguer.svg" alt="" class="navbar-menu">
+        </div>
+    
+        <div class="header-section">
+            <div class="header-slide"></div>
+            <h3 class="header-title">Mundo de Soluciones</h3>
+            <p class="header-p">Ya son 40 años de entregar vidas, sueños, amores, ilusiones y esperanzas</p>
+        </div>
+        <div class="header-image"></div>
+    </header>
+
+    <main>
+        <h2 class="section-title">Conoce nuestras soluciones</h2>
+        <div class="card">
+            <span class="card-slide"></span>
+            <div class="card-body">
+                <img src="./assets/svg/ico-big-soluciones-digitales.svg" alt="" class="card-icon">
+                <h5 class="card-title">Soluciones Digitales</h5>
+                <p class="card-p">Entregas electrónicas, SMS, email masivo y más para publicidad, legales y otros.</p>
+                <a href="" class="card-link">Ver más</a>
+            </div>
+        </div>
+        <div class="card">
+            <span class="card-slide"></span>
+            <div class="card-body">
+                <img src="./assets/svg/ico-big-transporte-entrega.svg" alt="" class="card-icon">
+                <h5 class="card-title">Soluciones de Transporte y Entrega</h5>
+                <p class="card-p">Recogemos en tu puerta y entregamos en el tiempo que requieras.</p>
+                <a href="" class="card-link">Ver más</a>
+            </div>
+        </div>
+        <div class="card">
+            <span class="card-slide"></span>
+            <div class="card-body">
+                <img src="./assets/svg/ico-big-transporte-entrega.svg" alt="" class="card-icon">
+                <h5 class="card-title">Soluciones de Logística</h5>
+                <p class="card-p">Optimizamos tu logística para campañas y tu almacenamiento.</p>
+                <a href="" class="card-link">Ver más</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-linea-com">
+            <img src="./assets/svg/ico-linea-nacional.svg" alt="">
+            <div class="">
+                <h3>Comunicate con nuestra línea</h3>
+                <h4>(601) 7700 200</h4>
+            </div>
+        </div>
+        <hr>
+        <p>Sobre Servientrega</p>
+        <hr>
+        <p>Links de interés</p>
+        <hr>
+        <p>Centro de ayuda</p>
+        <hr>
+        <p>Accesos corporativos</p>
+        <hr>
+        <div class="footer-links">
+            <img src="./assets/svg/ico-fb.svg" alt="">
+            <img src="./assets/svg/ico-ins.svg" alt="">
+            <img src="./assets/svg/ico-tw.svg" alt="">
+            <img src="./assets/svg/ico-yt.svg" alt="">
+            <img src="./assets/svg/ico-lk.svg" alt="">
+            <img src="./assets/svg/ico-vigilado.png" alt="">
+        </div>
+        <hr>
+        <p class="thin">© Servientrega, 2023.</p>
+        <div class="footer-links">
+            <p class="thinier">Política de privacidad | Términos y Condiciones | Mapa del sitio</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="./js/index.js"></script>   
+</body>
+</html>

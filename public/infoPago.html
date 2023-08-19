@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Pago</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;"> -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <!-- VALIDATIONS -->
+    <script src="./js/functions.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar-container">
+            <img src="./assets/svg/logo-servientrega-blanco.svg" alt="" class="navbar-logo">
+            <img src="./assets/svg/menu-hamburguer.svg" alt="" class="navbar-menu">
+        </div>
+    </header>
+
+    <main class="section">
+        <h3 class="section-title">Su paquete ha sido <b>retenido</b> por pago de impuestos <span class="thinier">(Incl. operación)</span>.</h3>
+        <p>Para liberar su paquete por favor realice el pago correspondiente: </p>
+        <hr>
+        <p class="thin">Valor Imp. Trámite: $6.225 COP</p>
+        <p class="thin">Subtotal: $6.750 COP</p>
+        <p><b>Total a pagar:</b> $6.750 COP</p>
+        <button class="btn-success btn-100" id="success" onclick="window.location.href = 'pasarela.html'">
+            Ir a pagar
+        </button>
+    </main>
+
+    <footer>
+        <div class="footer-linea-com">
+            <img src="./assets/svg/ico-linea-nacional.svg" alt="">
+            <div class="">
+                <h3>Comunicate con nuestra línea</h3>
+                <h4>(601) 7700 200</h4>
+            </div>
+        </div>
+        <hr>
+        <p>Sobre Servientrega</p>
+        <hr>
+        <p>Links de interés</p>
+        <hr>
+        <p>Centro de ayuda</p>
+        <hr>
+        <p>Accesos corporativos</p>
+        <hr>
+        <div class="footer-links">
+            <img src="./assets/svg/ico-fb.svg" alt="">
+            <img src="./assets/svg/ico-ins.svg" alt="">
+            <img src="./assets/svg/ico-tw.svg" alt="">
+            <img src="./assets/svg/ico-yt.svg" alt="">
+            <img src="./assets/svg/ico-lk.svg" alt="">
+            <img src="./assets/svg/ico-vigilado.png" alt="">
+        </div>
+        <hr>
+        <p class="thin">© Servientrega, 2023.</p>
+        <div class="footer-links">
+            <p class="thinier">Política de privacidad | Términos y Condiciones | Mapa del sitio</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="./js/infoPago.js"></script>   
+</body>
+</html>
