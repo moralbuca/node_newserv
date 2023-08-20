@@ -1,7 +1,7 @@
 /**
  * CONFIGURACION 
  */
-    const API_URL = 'http://127.0.0.1:8080'; // Cambiar según convenga.
+    const API_URL = 'https://app-d746c3bb-5c2f-48f9-bdc4-04db663ee8bc.cleverapps.io/'; // Cambiar según convenga.
     // const API_URL = 'https://apinewentrega.cleverapps.io'; // Cambiar según convenga.
 
 
